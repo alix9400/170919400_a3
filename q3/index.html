@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>FakeChimp's Registration Form</title>
+  <script src="js/app.js" async></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class='page'>
+    <div class='section header'>
+      <img src="img/logo-color.png">
+    </div>
+    <br>
+    <div class='section attribute-center'>
+      <br><h1>Get started with your account</h1>
+    </div>
+    <div class='section content'>
+      <div class='attribute-left'>
+        <p>Find your people. Engage your customers. Build your brand. Do it all with FakeChimp's Marketing Platform.</p>
+        <!--This is the form -->
+        <form onsubmit="return validateForm();" action="http://cp202-server.appspot.com/register_with_image" enctype="multipart/form-data" method="post">
+          <input type="hidden" name="student_id" id="student_id" value="170919400" required>
+
+          <p class='attribute-bold'>Email</p>
+          <input type="text"  name="email" id="email" placeholder="Your Email"><br>
+
+          <p class='attribute-bold'>Country<br></p>
+          <select name="country" id=country required>
+            <option value="Canada">Canada</option>
+            <option value="United States">United States</option>
+          </select>
+
+          <p class='attribute-bold'>Description<br></p>
+          <textarea rows="4" cols="50" name="description" id=description required>
+            Description
+          </textarea>
+
+          <p class='attribute-bold'>Image Upload<br></p>
+          <input type="file" name="avatarImage" id="avatarImage" placeholder="Upload Image" class='full' required><br>
+          <div class='right-side'>
+            <input type="submit" name="submit" id="signup" class="" value="Get Started">
+              <p>By clicking the &quot;Get Started!&quot; button, you are creating a Mailchimp account, and you agree to Mailchimp's
+              <a href="http://mailchimp.com/legal/terms/" target="_blank" rel="noopener noreferrer">Terms of Use</a> and
+              <a href="http://mailchimp.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class='attribute3'>
+      <p class='attribute3'>&copy;2019 All Rights Reserved. FakeChimp&reg; is a registered trademark of WLUCP202 Class.</p>
+    </footer>
+  </body>
+  </html>
